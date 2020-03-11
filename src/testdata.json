@@ -1,0 +1,51 @@
+{
+  "name": "FORM-2-M2",
+  "tableName": "DRUG_MOVEMENT",
+  "params": [
+    {
+      "key": "DATE",
+      "value": "02.03.2020"      
+    },
+    {
+      "key": "MONTH",
+      "value": "февраль"
+    },
+    {
+      "key": "TITLE",
+      "value": "заголовок"
+    }
+  ],
+  "data" : [
+    [
+      {
+        "value": "1.01011",
+        "valueType": "integer"
+      },
+      {
+        "value": "123",
+        "valueType": "money"
+      }
+    ],
+    [
+      {
+        "value": "2.3333",
+        "valueType": "integer"
+      },      
+      {
+        "value": "456",
+        "valueType": "numeric",
+        "format": "0.0000"
+      }
+    ],
+    [
+      {
+        "value": "3"
+      },
+      {
+        "value": "789",
+        "valueType": "numeric",
+        "format": "0.0000"
+      }      
+    ]
+  ]
+}

@@ -1,4 +1,7 @@
 const path = require('path')
+const webpack = require('webpack')
+const { CleanWebpackPlugin } = require('clean-webpack-plugin')
+const CopyPlugin = require('copy-webpack-plugin')
 
 module.exports = {
   entry: [
@@ -22,5 +25,13 @@ module.exports = {
         test: /\.js$/
       }
     ]
-  }
+  },
+  plugins: [
+    new webpack.ProgressPlugin(),
+    new CleanWebpackPlugin(),
+    new CopyPlugin([
+      { from: './public', to: 'public' },
+      { from: './uploads', to: 'uploads' }
+    ])
+  ]
 }
