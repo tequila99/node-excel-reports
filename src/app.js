@@ -1,4 +1,5 @@
 import express from 'express'
+import cors from 'cors'
 import bodyParser from 'body-parser'
 import health from './Routes/health'
 import uploads from './Routes/uploads'
@@ -7,6 +8,12 @@ const app = express()
 const API_PATH = '/api'
 const API_VERSION = 'v1'
 
+app.use(cors({
+  origin: '*',
+  methods: 'GET,PUT,POST,OPTIONS',
+  allowedHeaders: 'Content-Type,Authorization,X-Requested-With',
+  preflightContinue: true
+}))
 app.use(bodyParser.json())
 app.use(express.static('public'))
 // app.use(bodyParser.urlencoded({ extended: true }))

@@ -12,11 +12,11 @@ export class Helper {
     console.error(err)
   }
 
-  static createSuccessResponse (data, meta={}) {
+  static createSuccessResponse (data, meta = {}) {
     return {
       data,
       meta,
-      status: 'success',
+      status: 'success'
     }
   }
 
