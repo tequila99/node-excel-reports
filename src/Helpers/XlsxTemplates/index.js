@@ -128,7 +128,7 @@ class XLSXtemplate {
       throw new UserError('Отсутсвуют данные для заполнения шаблона XLSX')
     }
 
-    const { name = '', tableName = '', params = [], data: table = [] } = data
+    const { params = [], data: table = [] } = data
 
     params.forEach(param => this.applyParam(param))
 
@@ -153,7 +153,7 @@ class XLSXtemplate {
     this.clearUnusedParam()
   }
 
-  applyParam (param={}) {
+  applyParam (param = {}) {
     this.wb.find(`<${param.key}>`).forEach(cell => {
       if (cell.value() === `<${param.key}>`) {
         const value = getValue(param)
@@ -177,7 +177,7 @@ class XLSXtemplate {
     })
   }
 
-  applyStyle (cell,v) {
+  applyStyle (cell, v) {
     if ('styles' in v) {
       Object.keys(v).forEach(k => {
         cell.style(k, v[k])

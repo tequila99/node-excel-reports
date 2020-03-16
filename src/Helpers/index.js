@@ -20,7 +20,7 @@ export class Helper {
     }
   }
 
-  static createErrorResponse (err,meta={}) {
+  static createErrorResponse (err, meta = {}) {
     Helper.log(err)
     let errMessage = ''
     let statusCode
