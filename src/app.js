@@ -14,7 +14,8 @@ app.use(cors({
   allowedHeaders: 'Content-Type,Authorization,X-Requested-With',
   preflightContinue: true
 }))
-app.use(bodyParser.json())
+// app.use(bodyParser.json())
+app.use(bodyParser.json({limit: '10mb', extended: true}))
 app.use(express.static('public'))
 // app.use(bodyParser.urlencoded({ extended: true }))
 
