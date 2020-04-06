@@ -15,7 +15,7 @@ app.use(cors({
   preflightContinue: true
 }))
 // app.use(bodyParser.json())
-app.use(bodyParser.json({limit: '10mb', extended: true}))
+app.use(bodyParser.json({ limit: '10mb', extended: true }))
 app.use(express.static('public'))
 // app.use(bodyParser.urlencoded({ extended: true }))
 

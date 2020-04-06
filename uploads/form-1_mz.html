@@ -1,0 +1,852 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset='UTF-8'>
+  <style>
+    table {}
+
+    @page {
+      margin: 0.39375in 0.39375in 0.39375in 0.39375in;
+    }
+
+    tr {}
+
+    col {}
+
+    br {}
+
+    td {
+      vertical-align: bottom;
+      white-space: nowrap;
+      color: #000000;
+      font-size: 8pt;
+      font-weight: 400;
+      font-style: normal;
+      font-family: 'Arial', serif;
+      border: none;
+    }
+
+    .x21 {
+      text-align: left;
+      vertical-align: bottom;
+    }
+
+    .x22 {
+      text-align: center;
+      vertical-align: bottom;
+      font-size: 10pt;
+      font-weight: 700;
+    }
+
+    .x23 {
+      text-align: center;
+      vertical-align: bottom;
+      border: 1px solid;
+    }
+
+    .x24 {
+      text-align: right;
+      vertical-align: bottom;
+    }
+
+    .x25 {
+      text-align: center;
+      vertical-align: bottom;
+      border-top: 2px solid;
+      border-right: 2px solid;
+      border-bottom: 1px solid;
+      border-left: 2px solid;
+    }
+
+    .x26 {
+      text-align: center;
+      vertical-align: bottom;
+      font-size: 9pt;
+      font-family: 'Arial', 'sans-serif';
+    }
+
+    .x27 {
+      text-align: right;
+      vertical-align: top;
+    }
+
+    .x28 {
+      text-align: center;
+      vertical-align: top;
+      border-top: 1px solid;
+      border-right: 2px solid;
+      border-bottom: 1px solid;
+      border-left: 2px solid;
+    }
+
+    .x29 {
+      text-align: left;
+      vertical-align: bottom;
+      white-space: normal;
+      word-wrap: break-word;
+    }
+
+    .x30 {
+      text-align: left;
+      vertical-align: bottom;
+      white-space: normal;
+      word-wrap: break-word;
+      border-top: none;
+      border-right: none;
+      border-bottom: 1px solid;
+      border-left: none;
+    }
+
+    .x33 {
+      text-align: center;
+      vertical-align: bottom;
+      border-top: 1px solid;
+      border-right: 2px solid;
+      border-bottom: 1px solid;
+      border-left: 2px solid;
+    }
+
+    .x34 {
+      text-align: center;
+      vertical-align: bottom;
+      border-top: 1px solid;
+      border-right: none;
+      border-bottom: none;
+      border-left: 2px solid;
+    }
+
+    .x35 {
+      text-align: center;
+      vertical-align: bottom;
+      border-top: 1px solid;
+      border-right: none;
+      border-bottom: none;
+      border-left: none;
+    }
+
+    .x36 {
+      text-align: center;
+      vertical-align: bottom;
+      border-top: 1px solid;
+      border-right: 2px solid;
+      border-bottom: none;
+      border-left: none;
+    }
+
+    .x37 {
+      text-align: right;
+      vertical-align: bottom;
+    }
+
+    .x38 {
+      text-align: center;
+      vertical-align: bottom;
+      border-top: none;
+      border-right: 2px solid;
+      border-bottom: 1px solid;
+      border-left: 2px solid;
+    }
+
+    .x42 {
+      text-align: center;
+      vertical-align: bottom;
+      border-top: none;
+      border-right: none;
+      border-bottom: 1px solid;
+      border-left: none;
+    }
+
+    .x44 {
+      text-align: center;
+      vertical-align: bottom;
+      border-top: 1px solid;
+      border-right: 2px solid;
+      border-bottom: 2px solid;
+      border-left: 2px solid;
+    }
+
+    .x45 {
+      text-align: left;
+      vertical-align: bottom;
+      white-space: normal;
+      word-wrap: break-word;
+      border-top: none;
+      border-right: none;
+      border-bottom: 1px solid;
+      border-left: none;
+    }
+
+    .x46 {
+      text-align: right;
+      vertical-align: bottom;
+      font-style: italic;
+      font-family: 'Arial', 'sans-serif';
+    }
+
+    .x47 {
+      text-align: center;
+      vertical-align: middle;
+      white-space: normal;
+      word-wrap: break-word;
+      border: 1px solid;
+    }
+
+    .x48 {
+      text-align: left;
+      vertical-align: top;
+      white-space: normal;
+      word-wrap: break-word;
+      border: 1px solid;
+      padding: 2pt;
+    }
+
+    .x49 {
+      text-align: center;
+      vertical-align: top;
+      white-space: normal;
+      word-wrap: break-word;
+      border: 1px solid;
+      padding: 2pt;
+    }
+
+    .x50 {
+      text-align: center;
+      vertical-align: middle;
+      white-space: normal;
+      word-wrap: break-word;
+      border: 1px solid;
+      padding: 2pt;
+    }
+
+    .x53 {
+      text-align: right;
+      vertical-align: top;
+      white-space: normal;
+      word-wrap: break-word;
+      border: 1px solid;
+      padding: 2pt;
+    }
+
+    .x59 {
+      text-align: left;
+      vertical-align: bottom;
+    }
+
+    .x68 {
+      text-align: center;
+      vertical-align: bottom;
+      font-weight: 700;
+      font-style: italic;
+      font-family: 'Arial', 'sans-serif';
+      border-top: 1px dashed;
+      border-right: 1px dashed;
+      border-bottom: none;
+      border-left: 1px dashed;
+    }
+
+    .x69 {
+      text-align: center;
+      vertical-align: top;
+      font-size: 7pt;
+      font-family: 'Arial', 'sans-serif';
+    }
+
+    .x70 {
+      text-align: center;
+      vertical-align: bottom;
+      font-weight: 700;
+      border-top: none;
+      border-right: 1px dashed;
+      border-bottom: none;
+      border-left: 1px dashed;
+    }
+
+    .x71 {
+      text-align: left;
+      vertical-align: bottom;
+      border-top: none;
+      border-right: none;
+      border-bottom: 1px solid;
+      border-left: none;
+    }
+
+    .x72 {
+      text-align: left;
+      vertical-align: bottom;
+      border-top: none;
+      border-right: none;
+      border-bottom: none;
+      border-left: 1px dashed;
+    }
+
+    .x73 {
+      text-align: left;
+      vertical-align: bottom;
+      border-top: none;
+      border-right: 1px dashed;
+      border-bottom: none;
+      border-left: none;
+    }
+
+    .x74 {
+      text-align: left;
+      vertical-align: bottom;
+      white-space: normal;
+      word-wrap: break-word;
+      border-top: none;
+      border-right: none;
+      border-bottom: none;
+      border-left: 1px dashed;
+      padding: 2pt;
+    }
+
+    .x75 {
+      text-align: left;
+      vertical-align: bottom;
+      white-space: normal;
+      word-wrap: break-word;
+      border-top: none;
+      border-right: 1px dashed;
+      border-bottom: 1px solid;
+      border-left: none;
+    }
+
+    .x76 {
+      text-align: center;
+      vertical-align: top;
+      font-size: 7pt;
+      font-family: 'Arial', 'sans-serif';
+      border-top: none;
+      border-right: 1px dashed;
+      border-bottom: none;
+      border-left: none;
+    }
+
+    .x77 {
+      text-align: center;
+      vertical-align: bottom;
+      border-top: none;
+      border-right: 1px dashed;
+      border-bottom: none;
+      border-left: none;
+    }
+
+    .x78 {
+      text-align: right;
+      vertical-align: bottom;
+      border-top: none;
+      border-right: none;
+      border-bottom: none;
+      border-left: 1px dashed;
+    }
+
+    .x79 {
+      text-align: left;
+      vertical-align: bottom;
+      border-top: none;
+      border-right: none;
+      border-bottom: 1px dashed;
+      border-left: 1px dashed;
+    }
+
+    .x80 {
+      text-align: left;
+      vertical-align: bottom;
+      border-top: none;
+      border-right: none;
+      border-bottom: 1px dashed;
+      border-left: none;
+    }
+
+    .x81 {
+      text-align: left;
+      vertical-align: bottom;
+      border-top: none;
+      border-right: 1px dashed;
+      border-bottom: 1px dashed;
+      border-left: none;
+    }
+  </style>
+</head>
+<body>
+<table border=0 cellpadding=0 cellspacing=0 style='border-collapse: collapse;table-layout:fixed;width:927pt'>
+  <colgroup>
+    <col class=x21 span=4 style='width:10.5pt'>
+    <col class=x21 span=2 style='width:5.25pt'>
+    <col class=x21 span=8 style='width:10.5pt'>
+    <col class=x21 span=2 style='width:5.25pt'>
+    <col class=x21 span=4 style='width:10.5pt'>
+    <col class=x21 style='width:6pt'>
+    <col class=x21 style='width:4.5pt'>
+    <col class=x21 span=2 style='width:21pt'>
+    <col class=x21 style='width:5.25pt'>
+    <col class=x21 span=2 style='width:8.25pt'>
+    <col class=x21 style='width:21pt'>
+    <col class=x21 style='width:4.5pt'>
+    <col class=x21 style='width:16.5pt'>
+    <col class=x21 style='width:21pt'>
+    <col class=x21 style='width:3pt'>
+    <col class=x21 style='width:7.5pt'>
+    <col class=x21 style='width:21pt'>
+    <col class=x21 style='width:18.75pt'>
+    <col class=x21 style='width:2.25pt'>
+    <col class=x21 span=2 style='width:21pt'>
+    <col class=x21 style='width:3pt'>
+    <col class=x21 style='width:7.5pt'>
+    <col class=x21 span=2 style='width:10.5pt'>
+    <col class=x21 style='width:21pt'>
+    <col class=x21 span=2 style='width:10.5pt'>
+    <col class=x21 style='width:3pt'>
+    <col class=x21 style='width:18.75pt'>
+    <col class=x21 style='width:21pt'>
+    <col class=x21 style='width:10.5pt'>
+    <col class=x21 style='width:17.25pt'>
+    <col class=x21 style='width:3.75pt'>
+    <col class=x21 span=2 style='width:21pt'>
+    <col class=x21 style='width:1.5pt'>
+    <col class=x21 style='width:19.5pt'>
+    <col class=x21 span=2 style='width:10.5pt'>
+    <col class=x21 style='width:21pt'>
+    <col class=x21 style='width:10.5pt'>
+    <col class=x21 span=2 style='width:5.25pt'>
+    <col class=x21 style='width:10.5pt'>
+    <col class=x21 style='width:13.5pt'>
+    <col class=x21 style='width:12.75pt'>
+    <col class=x21 style='width:1.5pt'>
+    <col class=x21 span=4 style='width:10.5pt'>
+    <col class=x21 span=2 style='width:5.25pt'>
+    <col class=x21 span=3 style='width:10.5pt'>
+    <col class=x21 style='width:3.75pt'>
+    <col class=x21 style='width:6.75pt'>
+    <col class=x21 style='width:3.75pt'>
+    <col class=x21 style='width:6.75pt'>
+    <col class=x21 span=3 style='width:10.5pt'>
+    <col class=x21 style='width:13.5pt'>
+    <col class=x21 style='width:14.25pt'>
+    <col class=x21 style='width:28.5pt'>
+    <col class=x21 style='width:1.5pt'>
+  </colgroup>
+  <tr id='r0' style='height:12pt'>
+    <td class=x21 colspan=88></td>
+  </tr>
+  <tr id='r1' style='height:13pt'>
+    <td class=x22 colspan=60>НАКЛАДНАЯ № {{ document_number }}</td>
+    <td class=x21 colspan=17></td>
+    <td class=x23 colspan=8>Коды</td>
+  </tr>
+  <tr id='r2' style='height:13pt'>
+    <td class=x22 colspan=60>НА ОТПУСК МАТЕРИАЛОВ (МАТЕРИАЛЬНЫХ ЦЕННОСТЕЙ) НА СТОРОНУ</td>
+    <td class=x21 colspan=16></td>
+    <td class=x24><span style='float:right; padding-right: 3pt;'>Форма по ОКУД </span></td>
+    <td class=x25 colspan=8>0504205</td>
+  </tr>
+  <tr id='r3' style='height:12pt'>
+    <td class=x26 colspan=60>от {{ document_date_full }}</td>
+    <td class=x21 colspan=10></td>
+    <td class=x27 colspan=7 rowspan=2 style='height:23pt;'><span style='float:right; padding-right: 3pt;'>Дата </span></td>
+    <td class=x28 colspan=8 rowspan=2 style='height:21.5pt;'>{{ document_date }}</td>
+  </tr>
+  <tr id='r4' style='height:11pt'>
+    <td class=x21 colspan=70></td>
+  </tr>
+  <tr id='r5' style='height:22pt'>
+    <td class=x29 colspan=15 style='height:22pt;'>Отправитель (учреждение,<br>обособленное подразделение)</td>
+    <td class=x30 colspan=55>{{ document_supplier }}</td>
+    <td class=x24 colspan=6></td>
+    <td class=x24><span style='float:right; padding-right: 3pt;'>по ОКПО </span></td>
+    <td class=x38 colspan=8></td>
+  </tr>
+  <tr class=x21 id='r6' style='height:4pt'>
+    <td class=x21 colspan=70></td>
+    <td class=x24></td>
+    <td class=x24></td>
+    <td class=x24></td>
+    <td class=x24></td>
+    <td class=x24></td>
+    <td class=x24></td>
+    <td class=x24></td>
+    <td class=x34></td>
+    <td class=x35></td>
+    <td class=x35></td>
+    <td class=x35></td>
+    <td class=x35></td>
+    <td class=x35></td>
+    <td class=x35></td>
+    <td class=x36></td>
+  </tr>
+  <tr id='r7' style='height:11pt'>
+    <td class=x21 colspan=54></td>
+    <td class=x24></td>
+    <td class=x24></td>
+    <td class=x24></td>
+    <td class=x24></td>
+    <td class=x24></td>
+    <td class=x24><span style='float:right; padding-right: 3pt'>ИНН</span></td>
+    <td class=x23 colspan=10>{{ supplier_inn }}</td>
+    <td class=x37 colspan=7><span style='float:right; padding-right: 3pt;'>КПП </span></td>
+    <td class=x38 colspan=8>{{ supplier_kpp }}</td>
+  </tr>
+  <tr id='r8' style='height:11pt'>
+    <td class=x21 colspan=12 style='height:11pt;'>Структурное подразделение</td>
+    <td class=x21></td>
+    <td class=x21></td>
+    <td class=x21></td>
+    <td class=x30 colspan=55>ЛС</td>
+    <td class=x24></td>
+    <td class=x24></td>
+    <td class=x24></td>
+    <td class=x24></td>
+    <td class=x24></td>
+    <td class=x24></td>
+    <td class=x24></td>
+    <td class=x34></td>
+    <td class=x35></td>
+    <td class=x35></td>
+    <td class=x35></td>
+    <td class=x35></td>
+    <td class=x35></td>
+    <td class=x35></td>
+    <td class=x36></td>
+  </tr>
+  <tr id='r9' style='height:22pt'>
+    <td class=x29 colspan=15 style='height:22pt;'>Получатель (структурное<br>подразделение)</td>
+    <td class=x30 colspan=55>{{ document_recipient }}</td>
+    <td class=x24></td>
+    <td class=x24></td>
+    <td class=x24></td>
+    <td class=x24></td>
+    <td class=x24></td>
+    <td class=x24></td>
+    <td class=x24><span style='float:right; padding-right: 3pt;'>По ОКПО </span></td>
+    <td class=x33 colspan=8></td>
+  </tr>
+  <tr class=x21 id='r10' style='height:4pt'>
+    <td class=x21 colspan=70></td>
+    <td class=x24 colspan=7></td>
+    <td class=x34></td>
+    <td class=x35></td>
+    <td class=x35></td>
+    <td class=x35></td>
+    <td class=x35></td>
+    <td class=x35></td>
+    <td class=x35></td>
+    <td class=x36></td>
+  </tr>
+  <tr id='r11' style='height:11pt'>
+    <td class=x21 colspan=54></td>
+    <td class=x24></td>
+    <td class=x24></td>
+    <td class=x24></td>
+    <td class=x24></td>
+    <td class=x24></td>
+    <td class=x24><span style='float:right; padding-right: 3pt;'>ИНН</span></td>
+    <td class='x23' colspan='10'></td>
+    <td class=x37 colspan=7><span style='float:right; padding-right: 3pt;'>КПП </span></td>
+    <td class=x38 colspan=8></td>
+  </tr>
+  <tr id='r12' style='height:11pt'>
+    <td class=x21 colspan=5 style='height:11pt;'>Перевозчик</td>
+    <td class=x21 colspan=10></td>
+    <td class=x30 colspan=55></td>
+    <td class=x24></td>
+    <td class=x24></td>
+    <td class=x24></td>
+    <td class=x24></td>
+    <td class=x24></td>
+    <td class=x24></td>
+    <td class=x24><span style='float:right; padding-right: 3pt'>По ОКПО </span></td>
+    <td class=x33 colspan=8></td>
+  </tr>
+  <tr class=x21 id='r13' style='height:4pt'>
+    <td class=x21 colspan=70></td>
+    <td class=x24></td>
+    <td class=x24></td>
+    <td class=x24></td>
+    <td class=x24></td>
+    <td class=x24></td>
+    <td class=x24></td>
+    <td class=x24></td>
+    <td class=x34></td>
+    <td class=x35></td>
+    <td class=x35></td>
+    <td class=x35></td>
+    <td class=x35></td>
+    <td class=x35></td>
+    <td class=x35></td>
+    <td class=x36></td>
+  </tr>
+  <tr id='r14' style='height:11pt'>
+    <td class=x21 colspan=54></td>
+    <td class=x24></td>
+    <td class=x24></td>
+    <td class=x24></td>
+    <td class=x24></td>
+    <td class=x24></td>
+    <td class=x24><span style='float:right; padding-right: 3pt'>ИНН</span></td>
+    <td class='x23' colspan='10'></td>
+    <td class=x37 colspan=7><span style='float:right; padding-right: 3pt'>КПП </span></td>
+    <td class='x38' colspan='8'></td>
+  </tr>
+  <tr id='r15' style='height:11pt'>
+    <td class=x21 colspan=28 style='height:11pt;'>Единица измерения: руб (с точностью до второго десятичного знака)</td>
+    <td class=x21 colspan=42></td>
+    <td class=x24></td>
+    <td class=x24></td>
+    <td class=x24></td>
+    <td class=x24></td>
+    <td class=x24></td>
+    <td class=x24></td>
+    <td class=x24><span style='float:right; padding-right: 3pt'>по ОКЕИ </span></td>
+    <td class=x44 colspan=8>383</td>
+  </tr>
+  <tr id='r16' style='height:12pt'>
+    <td class=x21 colspan=88></td>
+  </tr>
+  <tr id='r17' style='height:11pt'>
+    <td class=x21 colspan=5>Основание</td>
+    <td class=x45 colspan=65>{{ document_reason }}</td>
+    <td class=x21 colspan=15></td>
+  </tr>
+  <tr id='r18' style='height:12pt'>
+    <td class=x21 colspan=88></td>
+  </tr>
+  <tr id='r19' style='height:11pt'>
+    <td class=x46 colspan=84><span style='float:right'>Страница 1</span></td>
+    <td class=x21></td>
+  </tr>
+  <tr id='r20' style='height:22pt'>
+    <td class=x47 colspan=26 style='height:20.5pt;'>Материальные ценности</td>
+    <td class=x47 colspan=5>Единица измерения</td>
+    <td class=x47 colspan=5 rowspan=3 style='height:53.5pt;'>Цена</td>
+    <td class=x47 colspan=8>Количество</td>
+    <td class=x47 colspan=12>Сумма</td>
+    <td class=x47 colspan=19>Корреспондирующие счета</td>
+    <td class=x47 colspan=9 rowspan=3 style='height:53.5pt;'>Примечание</td>
+    <td class=x21></td>
+  </tr>
+  <tr id='r21' style='height:11pt'>
+    <td class=x47 colspan=14 rowspan=2 style='height:31.5pt;'>наименование, сорт, размер,<br>марка и другие характеристики</td>
+    <td class=x47 colspan=12>номер</td>
+    <td class=x47 colspan=3 rowspan=2 style='height:31.5pt;'>наи-<br>мено-<br>вание</td>
+    <td class=x47 colspan=2 rowspan=2 style='height:31.5pt;'>код по<br>ОКЕИ</td>
+    <td class=x47 colspan=4 rowspan=2 style='height:31.5pt;'>надлежит<br>отпустить</td>
+    <td class=x47 colspan=4 rowspan=2 style='height:31.5pt;'>отпущено</td>
+    <td class=x47 colspan=4 rowspan=2 style='height:31.5pt;'>без НДС</td>
+    <td class=x47 colspan=4 rowspan=2 style='height:31.5pt;'>НДС</td>
+    <td class=x47 colspan=4 rowspan=2 style='height:31.5pt;'>всего с<br>учетом НДС</td>
+    <td class=x47 colspan=8 rowspan=2 style='height:31.5pt;'>дебет</td>
+    <td class=x47 colspan=11 rowspan=2 style='height:31.5pt;'>кредит</td>
+    <td class=x21></td>
+  </tr>
+  <tr id='r22' style='height:22pt'>
+    <td class=x47 colspan=7>номенклатурный</td>
+    <td class=x47 colspan=5>паспорта<br>(иной)</td>
+    <td class=x21></td>
+  </tr>
+  <tr id='r23' style='height:11pt'>
+    <td class=x47 colspan=14 style='height:9.5pt;'>1</td>
+    <td class=x47 colspan=7>2</td>
+    <td class=x47 colspan=5>3</td>
+    <td class=x47 colspan=3>4</td>
+    <td class=x47 colspan=2>5</td>
+    <td class=x47 colspan=5>6</td>
+    <td class=x47 colspan=4>7</td>
+    <td class=x47 colspan=4>8</td>
+    <td class=x47 colspan=4>9</td>
+    <td class=x47 colspan=4>10</td>
+    <td class=x47 colspan=4>11</td>
+    <td class=x47 colspan=8>12</td>
+    <td class=x47 colspan=11>13</td>
+    <td class=x47 colspan=9>14</td>
+    <td class=x21></td>
+  </tr>
+  <tr style='height:33pt' class='data-table-row'>
+    <td class='x48' colspan='14'>
+      {{ col-1 }}
+    </td>
+    <td class='x49' colspan='7'>{{ col-2 }}</td>
+    <td class='x49' colspan='5'>{{ col-3 }}</td>
+    <td class='x49' colspan='3'>{{ col-4 }}</td>
+    <td class='x49' colspan='2'>{{ col-5 }}</td>
+    <td class='x53' colspan='5'>{{ col-6 }}</td>
+    <td class='x53' colspan='4'>{{ col-7 }}</td>
+    <td class='x53' colspan='4'>{{ col-8 }}</td>
+    <td class='x53' colspan='4'>{{ col-9 }}</td>
+    <td class='x53' colspan='4'>{{ col-10 }}</td>
+    <td class='x53' colspan='4'>{{ col-11 }}</td>
+    <td class='x53' colspan='8'>{{ col-12 }}</td>
+    <td class='x53' colspan='11'>{{ col-13 }}</td>
+    <td class='x53' colspan='9'>{{ col-14 }}</td>
+    <td class='x21'></td>
+  </tr>
+  <tr id='r25' style='height:11pt'>
+    <td class=x21 colspan=29></td>
+    <td class=x59 colspan=2>ИТОГО</td>
+    <td class=x53 colspan=5></td>
+    <td class=x53 colspan=4>{{ amount }}</td>
+    <td class=x53 colspan=4>{{ amount }}</td>
+    <td class=x53 colspan=4>{{ summa }}</td>
+    <td class=x53 colspan=4>{{ vat }}</td>
+    <td class=x53 colspan=4>{{ summa_vat }}</td>
+    <td class=x53 colspan=8></td>
+    <td class=x53 colspan=11></td>
+    <td class=x21 colspan=10></td>
+  </tr>
+  <tr id='r26' style='height:12pt'>
+    <td class=x21 colspan=88></td>
+  </tr>
+  <tr id='r27' style='height:11pt'>
+    <td class=x59 colspan=18 style='height:11pt;'>Всего отпущено на сумму с учетом НДС</td>
+    <td class=x30 colspan=40>{{ summa_in_words }}</td>
+    <td class=x21></td>
+    <td class=x68 colspan=25>Отметка бухгалтерии</td>
+    <td class=x21></td>
+  </tr>
+  <tr id='r28' style='height:11pt'>
+    <td class=x21 colspan=18></td>
+    <td class=x69 colspan=40>(сумма прописью)</td>
+    <td class=x21></td>
+    <td class=x70 colspan=25'>Корреспонденция счетов (графы 12-13) отражена</td>
+    <td class=x21></td>
+  </tr>
+  <tr id='r29' style='height:11pt'>
+    <td class=x21 colspan=59></td>
+    <td class=x70 colspan=25>в журнале операций за</td>
+    <td class=x21></td>
+  </tr>
+  <tr id='r30' style='height:22pt'>
+    <td class=x29 colspan=8 style='height:22pt;'>Ответственный<br>исполнитель</td>
+    <td class=x45 colspan=10></td>
+    <td class=x21></td>
+    <td class=x21></td>
+    <td class=x71 colspan=7></td>
+    <td class=x21></td>
+    <td class=x45 colspan=13></td>
+    <td class=x21 colspan=18></td>
+    <td class=x72 colspan=1></td>
+    <td class=x21 colspan=23></td>
+    <td class=x73 colspan=1></td>
+    <td class=x21></td>
+  </tr>
+  <tr id='r31' style='height:22pt'>
+    <td class=x21 colspan=8></td>
+    <td class=x69 colspan=10>(должность)</td>
+    <td class=x21></td>
+    <td class=x21></td>
+    <td class=x69 colspan=7>(подпись)</td>
+    <td class=x21></td>
+    <td class=x69 colspan=13>(расшифровка подписи)</td>
+    <td class=x21 colspan=18></td>
+    <td class=x74 colspan=6>Главный<br>бухгалтер</td>
+    <td class=x71 colspan=7></td>
+    <td class=x21></td>
+    <td class=x75 colspan=11></td>
+    <td class=x21></td>
+  </tr>
+  <tr id='r32' style='height:11pt'>
+    <td class=x21 colspan=59></td>
+    <td class=x72 colspan=3></td>
+    <td class=x21></td>
+    <td class=x21></td>
+    <td class=x21></td>
+    <td class=x69 colspan=7>(подпись)</td>
+    <td class=x21></td>
+    <td class=x76 colspan=11>(расшифровка подписи)</td>
+    <td class=x21></td>
+  </tr>
+  <tr id='r33' style='height:11pt'>
+    <td class=x59 colspan=4 style='height:11pt;'>Отпустил</td>
+    <td class=x21 colspan=29></td>
+    <td class=x21 colspan=2>Получил</td>
+    <td class=x21 colspan=24></td>
+    <td class=x72 colspan=3></td>
+    <td class=x21 colspan=10></td>
+    <td class=x59 colspan=4>М.П.</td>
+    <td class=x21 colspan=5></td>
+    <td class=x73 colspan=3 style='border-right:1px dashed; '></td>
+    <td class=x21></td>
+  </tr>
+  <tr id='r34' style='height:11pt'>
+    <td class=x21 colspan=59></td>
+    <td class=x72 colspan=3></td>
+    <td class=x21 colspan=19></td>
+    <td class=x77 colspan=3></td>
+    <td class=x21></td>
+  </tr>
+  <tr id='r35' style='height:11pt'>
+    <td class=x45 colspan=10>{{ supplier_position }}</td>
+    <td class=x21></td>
+    <td class=x71 colspan=9></td>
+    <td class=x21></td>
+    <td class=x21></td>
+    <td class=x30 colspan=9>{{ supplier_user_name }}</td>
+    <td class=x21></td>
+    <td class=x21></td>
+    <td class=x45 colspan=8>{{ recipient_position }}</td>
+    <td class=x21></td>
+    <td class=x71 colspan=6></td>
+    <td class=x21></td>
+    <td class=x30 colspan=9>{{ recipient_user_name }}</td>
+    <td class=x21></td>
+    <td class=x78></td>
+    <td class=x21>'</td>
+    <td class=x71></td>
+    <td class=x71></td>
+    <td class=x21></td>
+    <td class=x21>'</td>
+    <td class=x21></td>
+    <td class=x71 colspan=8></td>
+    <td class=x21></td>
+    <td class=x21></td>
+    <td class=x21></td>
+    <td class=x71 colspan=4></td>
+    <td class=x21></td>
+    <td class=x21>г.</td>
+    <td class=x73></td>
+    <td class=x21></td>
+  </tr>
+  <tr id='r36' style='height:11pt'>
+    <td class=x69 colspan=10 style='height:10.25pt;'>(должность)</td>
+    <td class=x21></td>
+    <td class=x69 colspan=9>(подпись)</td>
+    <td class=x21></td>
+    <td class=x21></td>
+    <td class=x69 colspan=9>(расшифровка подписи)</td>
+    <td class=x21></td>
+    <td class=x21></td>
+    <td class=x69 colspan=8>(должность)</td>
+    <td class=x21></td>
+    <td class=x69 colspan=6>(подпись)</td>
+    <td class=x21></td>
+    <td class=x69 colspan=9>(расшифровка подписи)</td>
+    <td class=x21></td>
+    <td class=x79 colspan=1></td>
+    <td class=x80 colspan=23></td>
+    <td class=x81 colspan=1></td>
+    <td class=x21></td>
+  </tr>
+  <tr id='r37' style='height:11pt'>
+    <td class=x21 colspan=85></td>
+  </tr>
+  <tr id='r38' style='height:11pt'>
+    <td class=x24 style='height:11pt;'><span style='float:right'>'</span></td>
+    <td class=x42 colspan=2></td>
+    <td class=x21>'</td>
+    <td class=x42 colspan=12></td>
+    <td class=x21></td>
+    <td class=x42 colspan=3></td>
+    <td class=x21 colspan=2>г.</td>
+    <td class=x21 colspan=63></td>
+  </tr>
+  <tr class=x21 id='r39' style='height:4pt'>
+    <td class=x21 colspan=85></td>
+  </tr>
+  <tr id='r40' style='height:11pt'>
+    <td class=x59 colspan=84 style='height:11pt;'>* Указать наименование должности лица, совершившего сделку, операцию и ответственного за ее оформление, либо наименование должности, ответственного за оформление свершившегося события</td>
+    <td class=x21></td>
+  </tr>
+</table>
+<!--  <script language='javascript' type='text/javascript'>-->
+<!--  </script>-->
+</body>
+</html>

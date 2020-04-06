@@ -1,0 +1,139 @@
+{
+  "name": "form-1_mz.html",
+  "tableName": "DRUG_MOVEMENT",
+  "params": [
+    {
+      "key": "DATE",
+      "value": "02.03.2020"      
+    },
+    {
+      "key": "MONTH",
+      "value": "февраль"
+    },
+    {
+      "key": "TITLE",
+      "value": "заголовок"
+    }
+  ],
+  "data" : [
+    [
+      {
+        "value": "Вирамун, сусп. д/п/внутрь  50 мг/5 мл,  240 мл (АА5284В до 01.09.21)",
+        "valueType": "string"
+      },
+      {
+        "value": "'00000000030",
+        "valueType": "string"
+      },
+      {
+        "value": "",
+        "valueType": "string"
+      },
+      {
+        "value": "пач. картон. 1",
+        "valueType": "string"
+      },
+      {
+        "value": "",
+        "valueType": "string"
+      },
+      {
+        "value": "722.40",
+        "valueType": "money"
+      },
+      {
+        "value": "1",
+        "valueType": "numeric",
+        "format": "0.000"
+
+      },
+      {
+        "value": "1",
+        "valueType": "numeric",
+        "format": "0.000"
+      },
+      {
+        "value": "722.40",
+        "valueType": "money"
+      },                                          
+      {
+        "value": "",
+        "valueType": "money"
+      },
+      {
+        "value": "722.40",
+        "valueType": "money"
+      },
+      {
+        "value": "",
+        "valueType": "string"
+      },
+      {
+        "value": "",
+        "valueType": "string"
+      },
+      {
+        "value": "",
+        "valueType": "string"
+      }
+    ],
+    [
+      {
+        "value": "Вирамун, сусп. д/п/внутрь  50 мг/5 мл,  240 мл (АА5284В до 01.09.21)",
+        "valueType": "string"
+      },
+      {
+        "value": "'00000000030",
+        "valueType": "string"
+      },
+      {
+        "value": "",
+        "valueType": "string"
+      },
+      {
+        "value": "пач. картон. 1",
+        "valueType": "string"
+      },
+      {
+        "value": "",
+        "valueType": "string"
+      },
+      {
+        "value": "722.40",
+        "valueType": "money"
+      },
+      {
+        "value": "1",
+        "valueType": "numeric"
+      },
+      {
+        "value": "1",
+        "valueType": "numeric"
+      },
+      {
+        "value": "722.40",
+        "valueType": "money"
+      },                                          
+      {
+        "value": "",
+        "valueType": "money"
+      },
+      {
+        "value": "722.40",
+        "valueType": "money"
+      },
+      {
+        "value": "",
+        "valueType": "string"
+      },
+      {
+        "value": "",
+        "valueType": "string"
+      },
+      {
+        "value": "",
+        "valueType": "string"
+      }
+    ]
+  ]
+}
