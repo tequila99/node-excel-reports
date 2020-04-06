@@ -17,7 +17,6 @@ module.exports = {
     path: path.resolve(__dirname, 'dist'),
     filename: 'index.bundle.js'
   },
-  externals: [nodeExternals()],
   module: {
     rules: [
       {
