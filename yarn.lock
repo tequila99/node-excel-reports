@@ -3676,6 +3676,13 @@ got@^6.7.1:
     unzip-response "^2.0.1"
     url-parse-lax "^1.0.0"
 
+gotenberg-js-client@^0.5.0:
+  version "0.5.0"
+  resolved "https://registry.yarnpkg.com/gotenberg-js-client/-/gotenberg-js-client-0.5.0.tgz#9e08ef7349bd241625f9c4a612b10a0e407b41d1"
+  integrity sha512-4J4EEHJnSUFjBbl1MDbp+E6mlqCa/uark+JTj3nGeZGt8IMx+7T3ytiQEKTdZXYqPL7CnAqnx6XnMm1CCOvHxQ==
+  dependencies:
+    form-data "^3.0.0"
+
 graceful-fs@^4.1.11, graceful-fs@^4.1.15, graceful-fs@^4.1.2, graceful-fs@^4.2.3:
   version "4.2.3"
   resolved "https://registry.yarnpkg.com/graceful-fs/-/graceful-fs-4.2.3.tgz#4a12ff1b60376ef09862c2093edd908328be8423"
@@ -5427,11 +5434,6 @@ node-libs-browser@^2.2.1:
     url "^0.11.0"
     util "^0.11.0"
     vm-browserify "^1.0.1"
-
-node-loader@^0.6.0:
-  version "0.6.0"
-  resolved "https://registry.yarnpkg.com/node-loader/-/node-loader-0.6.0.tgz#c797ef51095ed5859902b157f6384f6361e05ae8"
-  integrity sha1-x5fvUQle1YWZArFX9jhPY2HgWug=
 
 node-modules-regexp@^1.0.0:
   version "1.0.0"

@@ -27,8 +27,12 @@ export const formHtmlReport = async (req) => {
     await template.loadTemplate(path.join(UPLOAD_PATH, data.name))
     template.applyData(data)
     const outputFileName = await generate('1234567890abcdef', 21)
-    await template.toFile(path.join(PUBLIC_PATH, `${outputFileName}.html`))
-    return { link: `${outputFileName}.html` }
+    const link = await template.toFile({
+      filePath: PUBLIC_PATH,
+      fileName: outputFileName,
+      landscape: !!data.landscape
+    })
+    return { link }
   } else {
     throw new UserError('Не указано имя шаблона')
   }

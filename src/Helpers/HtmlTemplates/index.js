@@ -1,39 +1,25 @@
 import { JSDOM } from 'jsdom'
 import fs from 'fs'
+import path from 'path'
+import { pipe, gotenberg, convert, html, please, to, a4, portrait, landscape } from 'gotenberg-js-client'
 
 import { UserError } from '../../Helpers/'
-import { getFormatValue, getValue } from '../utils'
+import { getFormatValue } from '../utils'
+// import { promises } from 'dns'
 
 const TEMPLATE_ROW = '.data-table-row'
+const GOTENBERG_URL = process.env.GOTENBERG_URL || 'http://10.3.0.36:17000'
+// const GOTENBERG_URL = ''
 
 class HTMLTemplate {
-  constructor () {
+  constructor (orientation = 'landscape') {
     this.dom = null
     this.document = null
     this.tableRow = null
     this.templateRow = null
     this.textHtml = null
+    this.orientation = orientation
   }
-
-  /* get dom () {
-    return this.dom
-  }
-
-  get document () {
-    return this.document
-  }
-
-  get tableRow () {
-    return this.tableRow
-  }
-
-  get templateRow () {
-    return this.templateRow
-  }
-
-  get textHtml () {
-    return this.textHtml
-  } */
 
   async loadTemplate (template) {
     const dom = await JSDOM.fromFile(template)
@@ -44,16 +30,58 @@ class HTMLTemplate {
     this.templateRow = this.tableRow.innerHTML
   }
 
-  async toFile (filePath) {
+  async toPdf ({ filePath, fileName, landscape }) {
+    const fullPath = path.join(filePath, `${fileName}.pdf`)
+    const translateToPDF = pipe(
+      gotenberg(GOTENBERG_URL),
+      convert,
+      html,
+      to({
+        paperWidth: 8.27,
+        paperHeight: 11.69,
+        marginTop: 0,
+        marginBottom: 0,
+        marginLeft: 0,
+        marginRight: 0,
+        landscape
+      }),
+      please
+    )
+    const pdf = await translateToPDF(this.textHtml)
+    pdf.pipe(fs.createWriteStream(fullPath))
+    pdf.on('end', () => Promise.resolve(`${fileName}.pdf`))
+    pdf.on('error', (error) => Promise.reject(error))
+  }
+
+  async toHtml ({ filePath, fileName }) {
+    const fullPath = path.join(filePath, `${fileName}.html`)
     return new Promise((resolve, reject) => {
-      fs.writeFile(filePath, this.textHtml, error => {
+      fs.writeFile(fullPath, this.textHtml, error => {
         if (error) {
           reject(error)
         } else {
-          resolve(true)
+          resolve(`${filePath}.html`)
         }
       })
     })
+  }
+
+  async toFile ({ filePath, fileName, landscape }) {
+
+    let link = `${fileName}.html`
+    if (GOTENBERG_URL) {
+      try {
+        await this.toPdf({ filePath, fileName, landscape })
+        link = `${fileName}.pdf`
+        console.log(fileName)
+      } catch (error) {
+        await this.toHtml({ filePath, fileName })
+      }
+    } else {
+      await this.toHtml({ filePath, fileName })
+    }
+    console.log(link)
+    return Promise.resolve(link)
   }
 
   applyData (data = {}) {

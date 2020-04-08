@@ -3,10 +3,10 @@
 <head>
   <meta charset='UTF-8'>
   <style>
-    table {}
+    table { }
 
     @page {
-      margin: 0.39375in 0.39375in 0.39375in 0.39375in;
+      margin: 0.5cm 0.5cm 0.5cm 1cm;
     }
 
     tr {}
@@ -430,7 +430,7 @@
     <td class=x21 colspan=88></td>
   </tr>
   <tr id='r1' style='height:13pt'>
-    <td class=x22 colspan=60>НАКЛАДНАЯ № {{ document_number }}</td>
+    <td class=x22 colspan=60>НАКЛАДНАЯ № {{ number }}</td>
     <td class=x21 colspan=17></td>
     <td class=x23 colspan=8>Коды</td>
   </tr>
@@ -451,7 +451,7 @@
   </tr>
   <tr id='r5' style='height:22pt'>
     <td class=x29 colspan=15 style='height:22pt;'>Отправитель (учреждение,<br>обособленное подразделение)</td>
-    <td class=x30 colspan=55>{{ document_supplier }}</td>
+    <td class=x30 colspan=55>{{ organization_full_name }}</td>
     <td class=x24 colspan=6></td>
     <td class=x24><span style='float:right; padding-right: 3pt;'>по ОКПО </span></td>
     <td class=x38 colspan=8></td>
@@ -482,9 +482,9 @@
     <td class=x24></td>
     <td class=x24></td>
     <td class=x24><span style='float:right; padding-right: 3pt'>ИНН</span></td>
-    <td class=x23 colspan=10>{{ supplier_inn }}</td>
+    <td class=x23 colspan=10>{{ inn }}</td>
     <td class=x37 colspan=7><span style='float:right; padding-right: 3pt;'>КПП </span></td>
-    <td class=x38 colspan=8>{{ supplier_kpp }}</td>
+    <td class=x38 colspan=8>{{ kpp }}</td>
   </tr>
   <tr id='r8' style='height:11pt'>
     <td class=x21 colspan=12 style='height:11pt;'>Структурное подразделение</td>
@@ -510,7 +510,7 @@
   </tr>
   <tr id='r9' style='height:22pt'>
     <td class=x29 colspan=15 style='height:22pt;'>Получатель (структурное<br>подразделение)</td>
-    <td class=x30 colspan=55>{{ document_recipient }}</td>
+    <td class=x30 colspan=55>{{ partner_full_name }}</td>
     <td class=x24></td>
     <td class=x24></td>
     <td class=x24></td>
@@ -540,9 +540,9 @@
     <td class=x24></td>
     <td class=x24></td>
     <td class=x24><span style='float:right; padding-right: 3pt;'>ИНН</span></td>
-    <td class='x23' colspan='10'></td>
+    <td class='x23' colspan='10'>{{ partner_inn }}</td>
     <td class=x37 colspan=7><span style='float:right; padding-right: 3pt;'>КПП </span></td>
-    <td class=x38 colspan=8></td>
+    <td class=x38 colspan=8>{{ partner_kpp }}</td>
   </tr>
   <tr id='r12' style='height:11pt'>
     <td class=x21 colspan=5 style='height:11pt;'>Перевозчик</td>
@@ -604,7 +604,7 @@
   </tr>
   <tr id='r17' style='height:11pt'>
     <td class=x21 colspan=5>Основание</td>
-    <td class=x45 colspan=65>{{ document_reason }}</td>
+    <td class=x45 colspan=65>{{ reason }}</td>
     <td class=x21 colspan=15></td>
   </tr>
   <tr id='r18' style='height:12pt'>
@@ -697,7 +697,7 @@
   </tr>
   <tr id='r27' style='height:11pt'>
     <td class=x59 colspan=18 style='height:11pt;'>Всего отпущено на сумму с учетом НДС</td>
-    <td class=x30 colspan=40>{{ summa_in_words }}</td>
+    <td class=x30 colspan=40>{{ amount_phrase }}</td>
     <td class=x21></td>
     <td class=x68 colspan=25>Отметка бухгалтерии</td>
     <td class=x21></td>
@@ -774,12 +774,12 @@
     <td class=x21></td>
   </tr>
   <tr id='r35' style='height:11pt'>
-    <td class=x45 colspan=10>{{ supplier_position }}</td>
+    <td class=x45 colspan=10>{{ user_position }}</td>
     <td class=x21></td>
     <td class=x71 colspan=9></td>
     <td class=x21></td>
     <td class=x21></td>
-    <td class=x30 colspan=9>{{ supplier_user_name }}</td>
+    <td class=x30 colspan=9>{{ user_short_name }}</td>
     <td class=x21></td>
     <td class=x21></td>
     <td class=x45 colspan=8>{{ recipient_position }}</td>

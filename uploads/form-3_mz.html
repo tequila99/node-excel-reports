@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+    .container {
+        display: flex;
+        flex-direction: column;
+        width: 21cm;
+        padding: 1cm 1cm 1cm 2cm;
+}
+    h4 {
+        position: relative;
+        text-align: center;
+        font-size: 18px;
+    }
+    .subtitle {
+       position: relative;
+        text-align: justify;
+    }
+    .underline {
+        position: relative;
+        text-align: center;
+        font-size: 12px;
+    }
+    .underlining {
+        margin-bottom: 0;
+        display: flex;
+        flex-direction: column;
+    }
+    .first__tb {
+        border: 1px solid black;
+        border-collapse: collapse;
+        table-layout: fixed;
+        width: 100%;
+    }
+    .second__tb {
+        border-spacing: 0;
+        margin-top: 0;
+    }
+    th, td{
+        width: auto;
+        height: 100%;
+        white-space: normal;
+        border: 1px solid black;
+        text-align: center;
+        padding: 0 5px;
+    }
+    td.left__column,
+    td.right__column {
+        text-align: left;
+        width: 40%;
+        border: none;
+    }
+    td.left__column {
+        display: block;
+        padding-top: 0px;
+    }
+    td.right__column {
+        padding-left: 85px;
+    }
+</style>
+<body class="container">
+
+<h4>Акт приема - передачи № {{ number }} <br> от  {{ document_date_full }}<br>
+    основание: {{ reason }}</h4>
+
+<p class="subtitle" style='text-indent: 1cm;'>
+    &#171;Поставщик&#187; <b> {{ organization_full_name }}</b> , в лице главного врача {{ organization_short_name }} 
+    {{ head_shortname }} действующего на основании <u>Устава</u>, с одной стороны и &#171;Получатель&#187;
+    <b>{{ partner_full_name }}</b><br>    
+</p>
+<div class="underlining">
+    <div style='width: 100%; display: flex;'><span>в лице главного врача</span> <span style='margin-left: .3cm; flex:1; display: flex; border-bottom: 1px solid grey;' ></span> </div>
+    <div class="underline">(ФИО)</div>
+</div>
+<div class="underlining">
+    <div style='width: 100%; display: flex;'><span>действующего на основании</span> <span style='margin-left: .3cm; flex:1; display: flex; border-bottom: 1px solid grey;' ></span> </div>
+    <div class="underline">(устава, положения, доверенности)</div>
+</div>
+<p>с другой стороны составили настоящий акт о следующем:</p>
+<p style='text-align: justify; text-indent: 1cm;'><u><i>Поставщик поставил, а получатель принял следующий Товар в соответствии с приказом управления здравоохранения Липецкой области, с планом распределения в установленные сроки, с
+    соблюдением установленного нормативно- технической документацией температурного режима:</i></u>
+</p>
+    <table class="first__tb">
+        <tr>
+            <th style='width:5%;'>
+                <span>№<br> п/п</span>
+            </th>
+            <th style='width:45%;'>
+                <span>Наименование</span>
+            </th>
+            <th>
+                <span>Ед. изм.</span>
+            </th>
+            <th>
+                <span>Количество</span>
+            </th>
+            <th>
+                <span>Срок годности</span>
+            </th>
+            <th>
+                <span>Серия</span>
+            </th>
+        </tr>
+        <tr class='data-table-row' >
+            <td style='text-align: right;'>
+                {{ col-1 }}
+            </td>
+            <td style='text-align: left;'>
+                {{ col-2 }}
+            </td>
+            <td style='text-align: center;'>
+                {{ col-3 }}
+            </td>
+            <td style='text-align: right;'>
+                {{ col-4 }}
+            </td>
+            <td style='text-align: center;'>
+                {{ col-5 }}
+            </td>
+            <td style='text-align: center;'>
+                {{ col-6 }}
+            </td>
+        </tr>
+    </table>
+<p>
+    Стоимость товара: {{ amount }} руб.
+</p>
+<p>
+    Полученный товар соответствует предоставленным документам, подтверждающим качество товара.
+</p>
+<p style='text-align: justify;text-indent: 1cm;'>
+    Получатель не имеет претензий к качеству и сроку годности поставленного Товара. К настоящему акту прилагаются следующие документы, подтверждающие поставку и получение Товара:
+</p>
+<p class="subtitle">
+    Накладная № {{ number }}  от {{ document_date_full }}
+</p>
+<div style='display: flex; padding: 0 5%;'>
+    <div style='flex: 1; text-align: center; padding-right: 5%;'>
+        <b>От Поставщика: <br> {{ organization_full_name }}</b><br>
+        __________________________ {{ head_shortname }}<br>
+        М.П.<br>
+        &#171;______&#187; __________________ 202__ г.
+    </div>
+    <div style='flex: 1; text-align: center; padding-left:5%;'>
+        <b>От Получателя:</b><br>
+        (главного врача ГУЗ)<br>
+            __________________________<br>
+            М.П.<br>
+            &#171;______&#187; __________________ 2020 г.<br>
+            <p>Ответственное лицо за получение, транспортировку и выдачу медикаментов согласно приказа по ЛПУ<br>
+                ФИО, должность (полностью)_____________</p>    
+    </div>
+</div>
+
+</body>
+</html>
