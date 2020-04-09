@@ -33,7 +33,6 @@ export const formHtmlReport = async (req) => {
         fileName: outputFileName,
         landscape: !!data.landscape
       })
-      console.log(link)
       return { link }
     } catch (error) {
       throw new UserError(error)

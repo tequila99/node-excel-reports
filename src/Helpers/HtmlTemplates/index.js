@@ -8,7 +8,7 @@ import { getFormatValue } from '../utils'
 // import { promises } from 'dns'
 
 const TEMPLATE_ROW = '.data-table-row'
-const GOTENBERG_URL = process.env.GOTENBERG_URL || 'http://10.3.0.36:17000'
+const GOTENBERG_URL = process.env.GOTENBERG_URL || 'http://localhost:17000'
 // const GOTENBERG_URL = ''
 
 class HTMLTemplate {
@@ -81,7 +81,6 @@ class HTMLTemplate {
     } else {
       await this.toHtml({ filePath, fileName })
     }
-    console.log(link)
     return Promise.resolve(link)
   }
 
