@@ -58,6 +58,7 @@ class HTMLTemplate {
     return new Promise((resolve, reject) => {
       fs.writeFile(fullPath, this.textHtml, error => {
         if (error) {
+          console.log(error)
           reject(error)
         } else {
           resolve(`${filePath}.html`)
@@ -73,8 +74,8 @@ class HTMLTemplate {
       try {
         await this.toPdf({ filePath, fileName, landscape })
         link = `${fileName}.pdf`
-        console.log(fileName)
       } catch (error) {
+        console.log(error)
         await this.toHtml({ filePath, fileName })
       }
     } else {
