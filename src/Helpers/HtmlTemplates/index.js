@@ -27,7 +27,9 @@ class HTMLTemplate {
     this.dom = dom
     this.document = document
     this.tableRow = document.querySelector(TEMPLATE_ROW)
-    this.templateRow = this.tableRow.innerHTML
+    if (this.tableRow) {
+      this.templateRow = this.tableRow.innerHTML
+    }
   }
 
   async toPdf ({ filePath, fileName, landscape }) {
@@ -75,7 +77,7 @@ class HTMLTemplate {
         await this.toPdf({ filePath, fileName, landscape })
         link = `${fileName}.pdf`
       } catch (error) {
-        console.log(error)
+        console.error(error)
         await this.toHtml({ filePath, fileName })
       }
     } else {
