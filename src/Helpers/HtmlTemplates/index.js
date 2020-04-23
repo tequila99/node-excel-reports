@@ -33,6 +33,8 @@ class HTMLTemplate {
   }
 
   async toPdf ({ filePath, fileName, landscape, width, height }) {
+    console.log(width)
+    console.log(height)
     const fullPath = path.join(filePath, `${fileName}.pdf`)
     const translateToPDF = pipe(
       gotenberg(GOTENBERG_URL),
