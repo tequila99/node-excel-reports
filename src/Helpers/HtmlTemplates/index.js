@@ -32,15 +32,15 @@ class HTMLTemplate {
     }
   }
 
-  async toPdf ({ filePath, fileName, landscape }) {
+  async toPdf ({ filePath, fileName, landscape, width, height }) {
     const fullPath = path.join(filePath, `${fileName}.pdf`)
     const translateToPDF = pipe(
       gotenberg(GOTENBERG_URL),
       convert,
       html,
       to({
-        paperWidth: 8.27,
-        paperHeight: 11.69,
+        paperWidth: width || 8.27,
+        paperHeight: height || 11.69,
         marginTop: 0,
         marginBottom: 0,
         marginLeft: 0,
@@ -69,12 +69,12 @@ class HTMLTemplate {
     })
   }
 
-  async toFile ({ filePath, fileName, landscape }) {
+  async toFile ({ filePath, fileName, landscape, width, height }) {
 
     let link = `${fileName}.html`
     if (GOTENBERG_URL) {
       try {
-        await this.toPdf({ filePath, fileName, landscape })
+        await this.toPdf({ filePath, fileName, landscape, width, height })
         link = `${fileName}.pdf`
       } catch (error) {
         console.error(error)

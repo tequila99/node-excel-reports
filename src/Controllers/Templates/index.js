@@ -31,7 +31,9 @@ export const formHtmlReport = async (req) => {
       const link = await template.toFile({
         filePath: PUBLIC_PATH,
         fileName: outputFileName,
-        landscape: !!data.landscape
+        landscape: !!data.landscape,
+        width: data.width || 0,
+        height: data.height || 0
       })
       return { link }
     } catch (error) {
