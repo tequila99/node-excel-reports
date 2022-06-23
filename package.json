@@ -13,7 +13,7 @@
     "excel4node": "^1.7.2",
     "express": "^4.17.1",
     "gotenberg-js-client": "^0.5.0",
-    "jsdom": "^16.2.2",
+    "jsdom": "^16.5.0",
     "multer": "^1.4.2",
     "nanoid": "^2.1.11",
     "xlsx-populate": "^1.21.0"
